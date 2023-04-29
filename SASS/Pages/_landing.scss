@@ -1,0 +1,99 @@
+@use "SASS/Layout/mixin"as *;
+
+.landing {
+    margin-bottom: 100px;
+    background-image: url(./Images/landing.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #21252fba;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 900px;
+
+
+        .content {
+            color: $light-color;
+
+            h1 {
+                font-size: 55px;
+                font-weight: bold;
+                animation-duration: 1s;
+
+
+                span {
+                    color: $main-color;
+                    animation-duration: 3s;
+
+                }
+            }
+
+            p {
+                line-height: 30px;
+                margin: 10px 0;
+            }
+
+            .btn {
+                margin-top: 20px;
+
+                span {
+                    padding: 6px 20px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    display: block;
+                    transition: 0.5s;
+
+                    &:first-child {
+
+                        border: solid 2px $light-color;
+
+                        &:hover {
+                            color: black;
+                            background-color: #fff;
+                        }
+                    }
+
+                    &:last-child {
+                        border: solid 1px $main-color;
+                        background-color: $main-color;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 640px) {
+    .landing {
+        .container {
+            .content {
+                h1 {
+                    font-size: 40px;
+                }
+
+                p {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

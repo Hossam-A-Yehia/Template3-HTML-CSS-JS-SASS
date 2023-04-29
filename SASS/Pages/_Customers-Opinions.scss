@@ -1,0 +1,92 @@
+@use "SASS/Layout/mixin"as *;
+
+section.customers-opinions {
+    padding: 100px 0;
+    background-color: $main-background;
+
+
+    .rate {
+        .box {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: $light-color;
+            transition: 0.3s;
+
+            &:hover {
+                transform: translateY(10px);
+                box-shadow: $box-shadow;
+            }
+
+            img {
+                @include circle(140px);
+                margin: auto;
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 700;
+                margin: 15px 0;
+            }
+
+            p {
+                color: #777;
+                margin-bottom: 15px;
+            }
+
+            .social {
+                @include flex(center);
+                margin-top: 20px;
+
+                a {
+                    i {
+                        @include circle(45px);
+                        color: #a82c48;
+                        border: solid 1px #a82c48;
+                        font-size: 25px;
+                        margin-right: 5px;
+                        text-align: center;
+                        line-height: 45px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: $light-color;
+                            background-color: $main-color;
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    i.fa-twitter {
+                        color: #5b59e3;
+                        border: solid 1px #5b59e3;
+
+                        &:hover {
+                            background-color: #5b59e3;
+                            color: $light-color;
+                        }
+                    }
+
+                    i.fa-facebook-f {
+                        color: #36367c;
+                        border: solid 1px #36367c;
+
+                        &:hover {
+                            background-color: #36367c;
+                            color: $light-color;
+                        }
+                    }
+
+                    i.fa-github {
+                        color: #484f58;
+                        border: solid 1px #484f58;
+
+                        &:hover {
+                            background-color: #484f58;
+                            color: $light-color;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

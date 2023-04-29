@@ -1,0 +1,64 @@
+@use "SASS/Layout/mixin"as *;
+
+section.articles {
+    padding: 100px 0;
+
+    .art {
+        .box {
+            box-shadow: $box-shadow;
+            padding: 25px;
+            text-align: right;
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: none;
+                transform: translateY(10px);
+            }
+        }
+
+        .image {
+            padding-bottom: 15px;
+            border-bottom: solid 1px #ccc;
+
+            img {
+                min-width: 333px;
+                height: 190px;
+                max-width: 100%;
+            }
+        }
+
+        .text {
+            margin: 15px 0;
+            padding: 0 0 0 20px;
+
+            h1 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                color: #777;
+                line-height: 1.6;
+                margin: 10px 0;
+            }
+        }
+
+        .btn {
+            padding: 8px 18px;
+            text-align: center;
+            color: #a82c48;
+            border: 2px solid #a82c48;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+            display: block;
+            width: fit-content;
+            margin: 20px 0 0 auto;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $main-color;
+                color: $light-color;
+            }
+        }
+    }
+}

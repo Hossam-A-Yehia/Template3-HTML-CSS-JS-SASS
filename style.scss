@@ -1,0 +1,13 @@
+@use "./SASS/Layout/global-rules"as *;
+@use "./SASS/Layout/mixin"as *;
+@use "./SASS/Pages/Navbar"as *;
+@use "./SASS/Pages/landing"as *;
+@use "./SASS/Pages/About-as"as *;
+@use "./SASS/Pages/skills"as *;
+@use "./SASS/Pages/Services"as *;
+@use "./SASS/Pages/Portfolio"as *;
+@use "./SASS/Pages/Prices"as *;
+@use "./SASS/Pages/Customers-Opinions"as *;
+@use "./SASS/Pages/Articles"as *;
+@use "./SASS/Pages/Contact"as *;
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');

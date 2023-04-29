@@ -1,0 +1,107 @@
+@use "SASS/Layout/mixin"as *;
+
+section.about {
+
+    margin-bottom: 100px;
+    overflow: hidden;
+
+
+    .about-us {
+        text-align: right;
+        animation-duration: 1.5s;
+        animation-delay: 0.3s;
+        padding: 15px 55px;
+        margin: 0 45px;
+        box-shadow: $box-shadow;
+        border-radius: 10px;
+        transition: 0.3s;
+        position: relative;
+
+        span {
+            color: $main-color;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 50px;
+        }
+
+        .contact {
+            .info {
+                @include flex(right);
+
+                .text {
+                    margin-right: 20px;
+
+                    h2 {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        margin-bottom: 20px
+                    }
+                }
+
+                i {
+                    @include flex(center);
+                    color: $light-color;
+                    @include circle(55px);
+                    background-color: $main-color;
+                    font-size: 32px;
+                    animation-delay: 0.5s;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 20px 0px #0000005c;
+            transform: scale(1.05);
+        }
+    }
+
+    .image {
+        width: 1200px;
+        height: 550px;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    section.about {
+        flex-direction: column-reverse;
+
+        .about-us {
+            margin: 50px 134px;
+        }
+
+        .image {
+            width: 1156px;
+            height: 500px;
+            padding: 0 100px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    section.about {
+        .image {
+            display: none;
+        }
+    }
+}

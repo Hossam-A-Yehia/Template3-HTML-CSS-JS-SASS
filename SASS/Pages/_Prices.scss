@@ -1,0 +1,63 @@
+@use "SASS/Layout/mixin"as *;
+
+section.price {
+    padding: 100px 0;
+
+    .boxs {
+        .box {
+            box-shadow: $box-shadow;
+            padding: 20px;
+            text-align: right;
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: none;
+                transform: translateY(10px);
+            }
+
+            .head {
+                padding: 15px 0;
+                border-bottom: solid 1px #ccc;
+
+                span {
+                    display: block;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 25px;
+                }
+
+                p {
+                    @include flex(center);
+                    @include circle (70px);
+                    background-color: $main-color;
+                    color: $light-color;
+                    margin: auto;
+                    margin-top: 10px;
+                    font-size: 30px;
+                }
+            }
+
+            .body {
+                margin-bottom: 20px px;
+                border-bottom: solid 1px #ccc;
+
+                li {
+                    margin: 17px 0;
+                    color: #777;
+
+                    i {
+                        color: $main-color;
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            button {
+                padding: 10px 20px;
+                background: $main-color;
+                color: $light-color;
+                margin: 25px 0 0 0;
+            }
+        }
+    }
+}

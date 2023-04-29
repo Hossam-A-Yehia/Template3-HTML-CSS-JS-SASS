@@ -1,0 +1,78 @@
+@use "SASS/Layout/mixin"as *;
+
+section.services {
+    padding: 100px 0;
+
+    .container {
+        .srv {
+            .box {
+
+                position: relative;
+                text-align: center;
+                padding: 20px;
+                box-shadow: $box-shadow;
+                z-index: 1;
+                overflow: hidden;
+                transition: 0.3s;
+                animation-duration: 1.5s;
+                animation-delay: 0.3s;
+
+                &:hover {
+                    transform: translateY(10px);
+
+                    i {
+                        background-color: $light-color;
+                        color: $main-color;
+                    }
+
+                    h1,
+                    p {
+                        color: $light-color;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: -290px;
+                    left: 0;
+                    background-color: $main-color;
+                    z-index: -1;
+                    transition: 0.3s;
+                }
+
+                &:hover::before {
+                    top: 0
+                }
+
+                i {
+                    @include circle(60px);
+                    @include flex(center);
+                    background-color: $main-color;
+                    color: $light-color;
+                    margin: auto;
+                    font-size: 30px;
+                    transition: 0.3s;
+                }
+
+                h1 {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin: 20px 0;
+                    transition: 0.3s;
+
+                }
+
+                p {
+                    color: #777;
+                    line-height: 1.8;
+                    margin-bottom: 15px;
+                    transition: 0.3s;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@use "SASS/Layout/mixin"as *;
+
+section.contact {
+    padding: 100px 0;
+    background-color: $main-background;
+
+    .container {
+        form {
+            padding: 70px 120px;
+            background: #fff;
+
+            input {
+                display: block;
+                height: 60px;
+                background-color: $main-background;
+                width: 100%;
+                margin: 10px 0;
+                padding: 15px;
+                text-align: right;
+                border: solid 1px #ccc;
+                transition: 0.3s;
+
+                &:focus {
+                    outline: none;
+                    border: #86b7fe 1px solid;
+                    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+                }
+
+            }
+
+            input[type="email"] {
+                width: 49%;
+                display: inline;
+            }
+
+            input#name {
+                width: 49%;
+                display: inline;
+                margin-left: 15px;
+            }
+
+            textarea {
+                display: block;
+                width: 100%;
+                height: 200px;
+                background-color: $main-background;
+                padding: 15px;
+                text-align: right;
+                margin: 20px 0;
+                transition: 0.3s;
+                border: solid 1px #ccc;
+
+                &:focus {
+                    outline: none;
+                    border: #86b7fe 1px solid;
+                    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+
+                }
+            }
+
+            button {
+                color: $light-color;
+                background-color: $main-color;
+                width: 100%;
+                height: 60px;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: #c94462;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1283px) {
+    section.contact {
+        .container {
+            form {
+                input#name {
+                    margin-left: 23px;
+                }
+
+                input[type="email"],
+                input#name {
+                    width: 48%;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    section.contact {
+        .container {
+            form {
+                padding: 30px;
+
+                input[type="email"],
+                input#name {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    section.contact {
+        .container {
+            form {
+                padding: 30px;
+            }
+        }
+    }
+}

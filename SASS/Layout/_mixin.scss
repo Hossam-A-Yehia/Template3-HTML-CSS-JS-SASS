@@ -1,0 +1,48 @@
+@mixin flex ($space) {
+    display: flex;
+    align-items: center;
+    justify-content: $space;
+}
+
+@mixin flex-item {
+    display: flex;
+    align-items: center;
+}
+
+@mixin circle($size) {
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+}
+
+@mixin breakpoints($point) {
+    @if $point==mobile {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if $point==small {
+        @media (min-width:768px) and (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @if $point==medium {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+
+    @if $point==large {
+        @media (min-width:1200) {
+            @content
+        }
+    }
+}
+
+
+$main-color: #a82c48;
+$light-color:#fff;
+$main-background: #f7f7f79e;
+$box-shadow: 0 8px 22px rgba(0, 0, 0, .1);

@@ -1,0 +1,180 @@
+@use "SASS/Layout/mixin"as *;
+
+section.skills {
+    padding: 100px 0;
+    background-color: $main-background;
+
+    .container {
+        .our-skills {
+            div {
+                text-align: right;
+                animation-duration: 1.5s;
+                animation-delay: 0.3s;
+
+                h1 {
+                    color: $main-color;
+                    color: #a82c48;
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin: 0px 15px 20px 0;
+                }
+
+                ul {
+                    width: auto;
+                    overflow: hidden;
+
+                    li.skills-drop {
+
+                        max-height: 300px;
+
+                        a {
+                            .info {
+                                opacity: 1;
+                            }
+                        }
+
+                        i {
+                            transform: rotate(-180deg);
+                        }
+                    }
+
+                    padding: 15px;
+
+                    li {
+                        position: relative;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        background-color: $light-color;
+                        padding: 15px;
+                        margin-bottom: 10px;
+                        max-height: 50px;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        a {
+                            pointer-events: none;
+
+                            span {
+                                color: $main-color;
+                            }
+
+                            .info {
+                                margin-top: 10px;
+                                padding: 10px;
+                                background-color: $light-color;
+                                position: relative;
+                                top: 0;
+                                left: -10px;
+                                border: 1px solid #ccc;
+                                opacity: 0;
+                                transition: 0.5s;
+
+                                h1 {
+                                    color: black;
+                                    font-size: 20px;
+                                    margin: 5px 0;
+                                }
+
+                                .data-prog {
+                                    display: flex;
+                                    flex-direction: row-reverse;
+                                    align-items: center;
+                                    margin: 25px 0px 10px 0;
+                                    padding: 8px 5px;
+                                    box-shadow: 0 0 20px 0px #b5b5b5;
+                                    border-radius: 4px;
+
+                                    h1 {
+                                        position: relative;
+                                        width: 80px;
+                                        text-align: center;
+                                        font-size: 17px;
+                                        text-transform: lowercase;
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            border-width: 9px;
+                                            border-color: transparent $light-color transparent transparent;
+                                            border-style: solid;
+                                            top: 50%;
+                                            left: -23px;
+                                            z-index: 1;
+                                            transform: translateY(-50%);
+                                        }
+                                    }
+
+                                    .progress {
+                                        position: relative;
+                                        flex: 1;
+                                        width: 100%;
+                                        transform: rotate(180deg);
+                                        height: 30px;
+                                        background-color: #ededed;
+                                        border-radius: 4px;
+                                        margin-right: 5px;
+
+                                        .num {
+                                            position: absolute;
+                                            background: 33;
+                                            z-index: 221;
+                                            background: transparent;
+                                            width: auto;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%)rotate(180deg);
+                                            color: $light-color;
+                                        }
+
+
+
+                                        span {
+                                            width: 0;
+                                            height: 30px;
+                                            background-color: #a82c48;
+                                            border-radius: 0px 4px 4px 0;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            transition: 1s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        i {
+                            cursor: pointer;
+                            max-height: 20px;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .skills .info {
+        min-width: 520px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills .our-skills {
+        flex-direction: column;
+
+        .info {
+            min-width: 550px;
+        }
+    }
+
+}
+
+@media (max-width: 767px) {
+    .skills .info {
+        min-width: 10px !important;
+    }
+}
